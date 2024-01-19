@@ -5,7 +5,7 @@ import cv2
 
 # construct the argument parser and parse the arguments
 ap = argparse.ArgumentParser()
-ap.add_argument("-i", "--image", type=str, default="01 OpenCV/01 Basics/01 Loading and Displaying Images/Images/opencv_logo.png",
+ap.add_argument("-i", "--image", type=str, default="./Images/opencv_logo.png",
     help="path to the input image")
 args = vars(ap.parse_args())
 
