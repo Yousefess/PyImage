@@ -22,6 +22,6 @@ cv2.imshow("Face", face)
 cv2.waitKey(0)
 
 # apply another image crop, this time extracting the body
-body = image[349:649, 377:680]
+body = image[163:649, 377:680]
 cv2.imshow("Body", body)
 cv2.waitKey(0)
