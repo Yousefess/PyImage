@@ -4,7 +4,7 @@ import cv2
 
 # construct the argument parser and parse the arguments
 ap = argparse.ArgumentParser()
-ap.add_argument("-i", "--image", type=str, default="01 OpenCV/01 Basics/Images/free-images.jpg",
+ap.add_argument("-i", "--image", type=str, default="./Images/free-images.jpg",
                 help="path to the input image")
 args = vars(ap.parse_args())
 
