@@ -31,3 +31,21 @@ for (name, chan) in zip(("H", "S", "V"), cv2.split(hsv)):
 # wait for a keypress, then close all the windows
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
+# convert the image to the L*a*b* color space and show it
+lab = cv2.cvtColor(image, cv2.COLOR_BGR2LAB)
+cv2.imshow("L*a*b*", lab)
+
+# loop over each of the individual channels and display them
+for (name, chan) in zip(("L*", "a*", "b*"), cv2.split(lab)):
+    cv2.imshow(name, chan)
+
+# wait for a keypress, then close all the windows
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+# show the original and grayscale versions of the image
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+cv2.imshow("Original", image)
+cv2.imshow("Grayscale", gray)
+cv2.waitKey(0)
