@@ -31,10 +31,13 @@ for imagePath in glob.glob(args["images"] + "/*.jpg"):
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     blurred = cv2.GaussianBlur(gray, (3, 3), 0)
 
-    # apply our automatic Canny edge detector
+    # apply Canny edge detection using a wide threshold, tight
+    # threshold, and automatically determined threshold
+    wide = cv2.Canny(blurred, 10, 200)
+    tight = cv2.Canny(blurred, 225, 250)
     auto = auto_canny(blurred)
 
-    # show the original and automatic edge detector
+    # show the images
     cv2.imshow("Original", image)
-    cv2.imshow("Automatic Edge Detection", auto)
+    cv2.imshow("Edges", np.hstack([wide, tight, auto]))
     cv2.waitKey(0)
