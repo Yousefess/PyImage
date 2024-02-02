@@ -4,4 +4,4 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/Yousefess/PyImage)
 ![GitHub top language](https://img.shields.io/github/languages/top/Yousefess/PyImage)
 
-This Repository about a working with Image and Face Detection in Python.
+This Repository about a working with Image in Python.
